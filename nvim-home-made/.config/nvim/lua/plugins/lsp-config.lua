@@ -23,6 +23,17 @@ return {
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
       vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+
+      vim.diagnostic.config({
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = '✘',
+            [vim.diagnostic.severity.WARN] = '▲',
+            [vim.diagnostic.severity.HINT] = '⚑',
+            [vim.diagnostic.severity.INFO] = '»',
+          },
+        },
+      })
     end
   }
 }
