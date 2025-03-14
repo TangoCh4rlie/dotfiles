@@ -10,9 +10,9 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
-				require("none-ls.diagnostics.eslint_d"),
+        null_ls.builtins.diagnostics.eslint
 			},
 		})
-		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<leader>gs", vim.lsp.buf.format, {})
 	end,
 }
